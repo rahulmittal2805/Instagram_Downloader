@@ -1,0 +1,20 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".Activity.MainActivity">
+
+
+    <item
+        android:id="@+id/item1"
+        android:icon="@mipmap/setting_icon"
+        android:title="How to Download"
+        />
+    <item
+        android:id="@+id/item2"
+        android:title="Share App" />
+    <item
+        android:id="@+id/item3"
+        android:icon="@drawable/instagram"
+        android:title="Settings"
+        app:showAsAction="withText" />
+</menu>

@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical"
+        android:padding="13sp">
+
+        <LinearLayout
+            android:id="@+id/lltextBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_white_gray_border">
+
+            <EditText
+                android:id="@+id/etPasteLink"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:hint="Paste Your instagram  URL Here"
+                android:padding="12sp"
+                android:singleLine="true"
+                android:textColor="@color/instagram_color"
+                android:textColorHint="@color/black_66"
+                android:textSize="15sp">
+
+            </EditText>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/lltextBox"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="10sp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/llPasteLink"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="15sp"
+                android:background="@drawable/bg_white_round"
+                android:padding="10sp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/paste_link"
+                    android:textAllCaps="true"
+                    android:textColor="@color/black">
+
+                </TextView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llDownloadButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_instagram_round"
+                android:padding="10sp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/download"
+                    android:textAllCaps="true"
+                    android:textColor="@color/white">
+
+                </TextView>
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/llButton"
+            android:layout_marginTop="10sp">
+
+
+            <!-- <androidx.recyclerview.widget.RecyclerView
+                 android:id="@+id/rlList"
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:outlineProvider="bounds">
+
+             </androidx.recyclerview.widget.RecyclerView>-->
+
+
+            <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/CardViewData"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginBottom="2dp"
+                android:visibility="gone"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="5dp"
+                app:cardElevation="4dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <RelativeLayout
+                        android:id="@+id/rlmain_image"
+                        android:layout_width="120dp"
+                        android:layout_height="120dp"
+                        android:layout_gravity="center">
+
+
+                        <ImageView
+                            android:id="@+id/main_image"
+                            android:layout_width="120dp"
+                            android:layout_height="120dp"
+                            android:adjustViewBounds="true"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/image" />
+
+                        <com.github.lzyzsd.circleprogress.DonutProgress
+                            android:id="@+id/donut_progress"
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:layout_centerInParent="true"
+                            android:visibility="visible"
+                            app:donut_background_color="@color/black_33"
+                            app:donut_text_color="@color/white"
+                            custom:donut_finished_color="@color/instagram_color"
+                            custom:donut_progress="50"
+                            custom:donut_text_size="13dp" />
+                    </RelativeLayout>
+
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/ivProfilePic"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="2dp"
+                        android:layout_toEndOf="@+id/rlmain_image"
+                        android:src="@drawable/profile"
+                        app:civ_border_color="#FF000000"
+                        app:civ_border_width="1dp" />
+
+
+                    <TextView
+                        android:id="@+id/tvUsername"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginLeft="10sp"
+                        android:layout_toEndOf="@id/ivProfilePic"
+                        android:gravity="center_horizontal"
+                        android:text="Sara ali khan"
+                        android:textColor="@color/black"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/comment"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/ivProfilePic"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginLeft="10sp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="4dp"
+                        android:layout_toEndOf="@id/rlmain_image"
+                        android:ellipsize="end"
+                        android:maxLines="2"
+                        android:text="Sara ali khan"
+                        android:textColor="@color/textColorlight"
+                        android:textSize="15sp" />
+
+
+                </RelativeLayout>
+
+
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+
+
+    </RelativeLayout>
+</LinearLayout>

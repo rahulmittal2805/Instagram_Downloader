@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    android:layout_margin="5dp"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="5dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:weightSum="1">
+
+
+        <FrameLayout
+            android:id="@+id/history_downloaded_frame"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/history_downloaded_images"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:background="#B3E5E5E5" />
+
+            <ImageView
+                android:id="@+id/history_image_slide_car"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_margin="2dp"
+                android:background="@drawable/multi_icon"
+                android:visibility="gone" />
+        </FrameLayout>
+
+        <RelativeLayout
+            android:id="@+id/history_main_lay"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_weight=".9"
+            android:orientation="vertical">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/history_user_icon"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_margin="2dp"
+                android:layout_marginTop="4dp"
+                android:src="@drawable/ic_person_black_24dp"
+                app:civ_border_color="@color/colorPrimary"
+                app:civ_border_width="1dp" />
+
+            <TextView
+                android:id="@+id/history_user_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"
+                android:layout_toEndOf="@id/history_user_icon"
+                android:text="@string/app_name"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/history_user_caption"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/history_user_name"
+                android:layout_marginStart="3dp"
+                android:layout_marginTop="5dp"
+                android:layout_toEndOf="@id/history_user_icon"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:text="this is my app this is my app this is my app this is my app this is my app this is my app "
+                android:textSize="14sp" />
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/history_options"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:layout_weight=".1"
+            android:src="@drawable/more">
+
+        </ImageView>
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>
+
